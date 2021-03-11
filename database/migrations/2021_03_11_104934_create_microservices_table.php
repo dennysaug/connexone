@@ -15,6 +15,9 @@ class CreateMicroservicesTable extends Migration
     {
         Schema::create('microservices', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('url');
+            $table->string('comment')->nullable();
             $table->timestamps();
         });
     }

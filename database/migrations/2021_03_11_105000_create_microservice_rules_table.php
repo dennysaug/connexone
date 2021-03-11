@@ -15,6 +15,10 @@ class CreateMicroserviceRulesTable extends Migration
     {
         Schema::create('microservice_rules', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('microservice_id');
+            $table->string('key');
+            $table->string('value');
+            $table->enum('restrict', ['Y','N'])->default('N');
             $table->timestamps();
         });
     }
