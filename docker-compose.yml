@@ -32,15 +32,6 @@ services:
 #      POSTGRES_DB: 'laravel'
 #      POSTGRES_USER: 'postgres'
       POSTGRES_PASSWORD: 'root'
-  adminer:
-    image: adminer
-    container_name: adminer
-    restart: always
-    ports:
-      - 8080:8080
-    networks:
-      - develop
-
   php:
     image: php:7.3.4-fpm
     container_name: laravel7x_php
